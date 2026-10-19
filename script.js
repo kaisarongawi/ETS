@@ -2,7 +2,7 @@
 const KUNCI = "dompetku-v1";
 
 const KATEGORI = {
-    masuk: ["Uang Bulanan", "Gaji", "Bonus", "Usaha", "Lainnya"],
+    masuk: ["Uang Bulanan", "Lainnya"],
     keluar: ["Makanan", "Transportasi", "Tagihan", "Belanja", "Hiburan", "Kesehatan", "Lainnya"]
 };
 
