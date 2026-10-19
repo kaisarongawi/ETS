@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e9efee;
+    color: #14211f;
+    line-height: 1.5;
+    padding: 20 px;
+}
+
+header {
+    background: #14423a;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+main {
+    max-width: 700px;
+    margin: auto;
+}
+
+section{
+    background: white;
+    padding: 20px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    border: 1px solid #d3dedb;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #d3dedb;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    background: #14423a;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #206456;
+}
+
+#saldo {
+    color: #14423a;
+}
+
+#total-masuk {
+    color: #1f7a5c;
+}
+
+#total-keluar {
+    color: #b4233c;
+}
+
+#peringatan {
+    color: #b4233c;
+    margin-top: 10px;
+}
+
+#pesan {
+    color: #b4233c;
+    margin-bottom: 10px;
+}
+
+#daftar-transaksi {
+    list-style: none;
+    padding: 0;
+}
+
+#daftar-transaksi li {
+    padding: 12px 0;
+    border-bottom: 1px solid #d3dedb;
+    overflow-wrap: anywhere;
+}
+
+#daftar-transaksi li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}

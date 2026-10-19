@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dompetku</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dompetku</h1>
+        <p>Catat dan atur keuanganmu.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Keuangan Bulanan</h2>
+
+            <label>Uang bulanan(Rp)</label>
+            <input type="number" id="uang-bulanan" placeholder="1500000">
+            <button id="simpan">Simpan</button>
+
+            <p>Jatah harian: <b id="jatah-harian">Rp 0</b> </p>
+            <p id="peringatan"></p>
+        </section>
+
+        <section>
+            <h2>Ringkasan</h2>
+
+            <p>Saldo: <b id="saldo">Rp 0</b></p>
+            <p>Pemasukan: <b id="total-masuk">Rp 0</b></p>
+            <p>Pengeluaran: <b id="total-keluar">Rp 0</b></p>
+        </section>
+
+        <section>
+            <h2>Tambah Transaksi</h2>
+
+            <label>Keterangan</label>
+            <input type="text" id="keterangan" placeholder="Contoh: Makan">
+
+            <label>Jenis transaksi</label>
+            <select id="jenis">
+                <option value="masuk">Pemasukan</option>
+                <option value="keluar">Pengeluaran</option>
+            </select>
+
+            <label>Kategori</label>
+            <select id="kategori">
+                <option value="Makan">Makan</option>
+                <option value="Transportasi">Transportasi</option>
+                <option value="Kuliah">Kuliah</option>
+                <option value="Lainnya">Lainnya</option>
+            </select>
+
+            <label>Nominal (Rp)</label>
+            <input type="number" id="nominal" min="1" placeholder="20000">
+
+            <label>Tanggal</label>
+            <input type="date" id="tanggal">
+
+            <p id="pesan"></p>
+            <button id="tambah">Simpan Transaksi</button>
+        </section>
+
+        <section>
+            <h2>Riwayat Transaksi</h2>
+            <ul id="daftar-transaksi"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
