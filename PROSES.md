@@ -106,5 +106,6 @@ Catat perkembangan pengerjaan pada setiap checkpoint.
 - **Checkpoint 1:** Menyimpan data menggunakan LocalStorage.
 - **Checkpoint 2:** Memvalidasi input
 - **Checkpoint 3:** Menampilkan dan mengahpus transaksi
+- **Checkpoint 4:** Menampilkan total pemasukan dan pengeluaran, dan fitur persona
 
 Setiap perubahan sebaiknya disertai commit dengan pesan yang menjelaskan pekerjaan yang dilakukan.

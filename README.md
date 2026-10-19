@@ -32,13 +32,13 @@ Mahasiswa kos mendapatkan uang bulanan tetap dari orang tua untuk memenuhi kebut
 - [x] Menampilkan daftar transaksi terbaru.
 - [x] Menghapus transaksi dengan konfirmasi.
 - [x] Menyimpan data menggunakan LocalStorage.
-- [ ] Menampilkan total pemasukan, total pengeluaran, dan saldo.
+- [x] Menampilkan total pemasukan, total pengeluaran, dan saldo.
 - [x] Memvalidasi input transaksi.
 
 ### Fitur Khas Persona Mahasiswa Kos
-- [ ] Memasukkan nominal uang bulanan.
-- [ ] Menampilkan jatah harian berdasarkan sisa uang dibagi sisa hari dalam bulan berjalan.
-- [ ] Memberikan peringatan jika pengeluaran hari ini melebihi jatah harian.
+- [x] Memasukkan nominal uang bulanan.
+- [x] Menampilkan jatah harian berdasarkan sisa uang dibagi sisa hari dalam bulan berjalan.
+- [x] Memberikan peringatan jika pengeluaran hari ini melebihi jatah harian.
 
 ### Fitur Bonus
 - [ ] Edit transaksi.

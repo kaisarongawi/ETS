@@ -161,4 +161,65 @@ function render() {
     renderRingkasan();
 }
 
-function renderRingkasan() {}
+
+function renderRingkasan() {
+    let pemasukan = 0;
+    let pengeluaran = 0;
+
+    data.transaksi.forEach(function (t) {
+        if (t.jenis === "masuk") {
+            pemasukan += t.nominal;
+        } else {
+            pengeluaran += t.nominal;
+        }
+    });
+
+    $("saldo").textContent = rupiah(pemasukan - pengeluaran);
+    $("total-masuk").textContent = rupiah(pemasukan);
+    $("total-keluar").textContent = rupiah(pengeluaran);
+
+    const sekarang = new Date();
+    const jumlahHari = new Date(
+        sekarang.getFullYear(),
+        sekarang.getMonth() + 1,
+        0
+    ).getDate();
+
+    const sisaHari = jumlahHari - sekarang.getDate() + 1;
+    const sisaUang = data.uangBulanan - pengeluaran;
+    const jatah = Math.max(0, sisaUang) / sisaHari;
+
+    $("jatah-harian").textContent = rupiah(Math.round(jatah));
+
+    let pengeluaranHariIni = 0;
+
+    data.transaksi.forEach(function (t) {
+        if (t.jenis === "keluar" && t.tanggal === hariIni()) {
+            pengeluaranHariIni += t.nominal;
+        }
+    });
+
+    if (pengeluaranHariIni > jatah) {
+        $("peringatan").textContent =
+            "Peringatan: pengeluaran hari ini melebihi jatah harian.";
+    } else {
+        $("peringatan").textContent = "";
+    }
+}
+
+function simpanUangBulanan() {
+    const nilai = $("uang-bulanan").value;
+    const uang = Number(nilai);
+
+    if (nilai === "" || !Number.isFinite(uang) || uang < 0) {
+        $("peringatan").textContent =
+            "Masukkan uang bulanan yang valid.";
+        return;
+    }
+
+    data.uangBulanan = uang;
+    simpanData();
+    renderRingkasan();
+}
+
+$("simpan").addEventListener("click", simpanUangBulanan);
