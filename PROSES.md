@@ -104,7 +104,7 @@ Bagian ini harus diisi berdasarkan bug atau kendala yang benar-benar ditemukan s
 Catat perkembangan pengerjaan pada setiap checkpoint.
 
 - **Checkpoint 1:** Menyimpan data menggunakan LocalStorage.
-- **Checkpoint 2:** (Fitur yang selesai dan commit yang dibuat.)
+- **Checkpoint 2:** Memvalidasi input
 - **Checkpoint 3:** (Fitur yang selesai dan commit yang dibuat.)
 
 Setiap perubahan sebaiknya disertai commit dengan pesan yang menjelaskan pekerjaan yang dilakukan.

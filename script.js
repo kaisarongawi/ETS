@@ -64,10 +64,26 @@ $("tambah").addEventListener("click", function () {
     const nominal = Number($("nominal").value);
     const tanggal = $("tanggal").value;
 
-    if (!keterangan || !nominal || nominal <= 0 || !tanggal) {
-        $("pesan").textContent = "Lengkapi semua kolom dengan benar.";
-        return;
-    }
+    $("pesan").textContent = "";
+
+if (!keterangan) {
+    $("pesan").textContent = "Keterangan harus diisi.";
+    $("keterangan").focus();
+    return;
+}
+
+if ($("nominal").value === "" ||
+    !Number.isFinite(nominal) || nominal <= 0) {
+    $("pesan").textContent = "Nominal harus lebih dari 0.";
+    $("nominal").focus();
+    return;
+}
+
+if (!tanggal) {
+    $("pesan").textContent = "Tanggal harus diisi.";
+    $("tanggal").focus();
+    return;
+}
 
     const transaksi = {
         id: Date.now(),
