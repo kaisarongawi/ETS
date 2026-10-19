@@ -107,4 +107,58 @@ $("tanggal").value = hariIni();
 ubahKategori();
 render();
 
-function render() {}
+
+function render() {
+    const daftar = $("daftar-transaksi");
+    daftar.innerHTML = "";
+
+    const transaksi = [...data.transaksi].sort(function (a, b) {
+        return b.tanggal.localeCompare(a.tanggal) || b.id - a.id;
+    });
+
+    if (transaksi.length === 0) {
+        const kosong = document.createElement("li");
+        kosong.textContent = "Belum ada transaksi.";
+        daftar.appendChild(kosong);
+        return;
+    }
+
+    transaksi.forEach(function (t) {
+        const item = document.createElement("li");
+
+        const nama = document.createElement("strong");
+        nama.textContent = t.keterangan;
+
+        const detail = document.createElement("p");
+        detail.textContent = t.kategori + " • " + t.tanggal;
+
+        const jumlah = document.createElement("p");
+        jumlah.textContent =
+            (t.jenis === "masuk" ? "+ " : "- ") + rupiah(t.nominal);
+
+        jumlah.style.color =
+            t.jenis === "masuk" ? "#1f7a5c" : "#b4233c";
+
+        const hapus = document.createElement("button");
+        hapus.textContent = "Hapus";
+        hapus.type = "button";
+
+        hapus.addEventListener("click", function () {
+            if (confirm("Yakin ingin menghapus transaksi ini?")) {
+                data.transaksi = data.transaksi.filter(function (x) {
+                    return x.id !== t.id;
+                });
+
+                simpanData();
+                render();
+            }
+        });
+
+        item.append(nama, detail, jumlah, hapus);
+        daftar.appendChild(item);
+    });
+
+    renderRingkasan();
+}
+
+function renderRingkasan() {}

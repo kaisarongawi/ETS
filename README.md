@@ -29,8 +29,8 @@ Mahasiswa kos mendapatkan uang bulanan tetap dari orang tua untuk memenuhi kebut
 
 ### Fitur Wajib
 - [x] Menambahkan transaksi pemasukan dan pengeluaran.
-- [ ] Menampilkan daftar transaksi terbaru.
-- [ ] Menghapus transaksi dengan konfirmasi.
+- [x] Menampilkan daftar transaksi terbaru.
+- [x] Menghapus transaksi dengan konfirmasi.
 - [x] Menyimpan data menggunakan LocalStorage.
 - [ ] Menampilkan total pemasukan, total pengeluaran, dan saldo.
 - [x] Memvalidasi input transaksi.
